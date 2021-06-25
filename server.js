@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 // var session = require('express-session');
 // var passport = require('passport');
-// var methodOverride = require('method-override');
+var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 // session middleware must be mounted before passport middleware
 // app.use(session({
