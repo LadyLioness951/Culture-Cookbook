@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Culture Cookbook' });
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -15,14 +15,14 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/movies',
-    failureRedirect: '/movies'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout();
-  res.redirect('/movies');
+  res.redirect('/');
 });
 
 module.exports = router;
