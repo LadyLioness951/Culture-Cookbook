@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.tour-culture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
