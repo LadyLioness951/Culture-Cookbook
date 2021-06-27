@@ -1,5 +1,10 @@
 <%- include('../partials/header') %>
 
-
+<h2>Enter A New Country</h2>
+<form id="new-form" action="/cultures" method="POST">
+    <label>Country:</label>
+    <input type="text" name="country">
+    <button type="submit" >Add Country</button>
+  </form>
 
 <%- include('../partials/footer') %>

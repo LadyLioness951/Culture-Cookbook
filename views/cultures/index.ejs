@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
 
-
+<table id="culture-list">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cultures.forEach(function(c) { %>
+        <tr>
+          <td><%= c.country %></td>
+          <td></td>
+          <td><a href="/cultures/<%= c._id %>">DETAILS</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
 
 <%- include('../partials/footer') %>
