@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Culture Cookbook' });
+  res.render('home', { title: 'Culture Cookbook' });
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -15,7 +15,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/index',
+    successRedirect: '/cultures',
     failureRedirect: '/'
   }
 ));

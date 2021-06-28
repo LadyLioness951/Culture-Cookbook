@@ -1,22 +1,15 @@
 <%- include('../partials/header') %>
 
-<table id="culture-list">
-    <thead>
-      <tr>
-        <th>Country</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% cultures.forEach(function(c) { %>
-        <tr>
-          <td><%= c.country %></td>
-          <td></td>
-          <td><a href="/cultures/<%= c._id %>">DETAILS</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
+<nav>
+  <a href="/cultures/new">Add Culture</a>
+</nav>
+<% cultures.forEach(function(c) { %>
+  <a href="/recipes?culture=<%= c._id %>">
+    <div>
+      <%= c.name %>
+      <img src="<%= c.image %>">
+    </div>
+  </a>
+<% }); %>
 
 <%- include('../partials/footer') %>

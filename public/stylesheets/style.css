@@ -14,9 +14,23 @@ a {
   align-items: flex-end;
 }
 
+.home {
+  text-align: center;
+}
+
 .tour-culture {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  font: menu;
+  display: inline-block;
+  padding: 2vmin, 8vmin;
+  background: ButtonFace;
+  color: blue;
+  border-style: solid;
+  border-width: 2vmin;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+  text-align: center;
+}
+
+.tour-culture:active {
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
 }

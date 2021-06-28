@@ -1,10 +1,13 @@
 <%- include('../partials/header') %>
 
-<h2>Enter A New Country</h2>
-<form id="new-form" action="/cultures" method="POST">
-    <label>Country:</label>
-    <input type="text" name="country">
-    <button type="submit" >Add Country</button>
-  </form>
+<h2>Enter A New Culture</h2>
+<form id="add-culture-form" action="/cultures" method="POST">
+  <label>Culture:</label>
+  <input type="text" name="name">
+  <label>Picture URL:</label>
+  <input type="text" name="image">
+  <br><br>
+  <button type="submit" >Add Culture</button>
+</form>
 
 <%- include('../partials/footer') %>
