@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const cultureSchema = new Schema({
   country: {
     type: String,
-    required: true
+    required: true,
   },
-    timestamps: true
-});
+    // timestamps: true
+  });
 
 module.exports = mongoose.model('Culture', cultureSchema);
