@@ -22,7 +22,7 @@ function show(req, res) {
     Culture.findById(req.params.id, function(err, culture) {
         res.render('cultures/show', {
             name: 'Culture',
-            image
+            culture
         });
     });
 }

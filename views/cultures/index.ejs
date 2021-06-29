@@ -4,7 +4,7 @@
   <a href="/cultures/new">Add Culture</a>
 </nav>
 <% cultures.forEach(function(c) { %>
-  <a href="/recipes?culture=<%= c._id %>">
+  <a href="/cultures/<%= c._id %>">
     <div>
       <%= c.name %>
       <img src="<%= c.image %>">

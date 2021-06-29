@@ -10,14 +10,18 @@ const recipeSchema = new Schema({
   image: {
     type: String
   },
-  directions: {
-    type: String
-  },
-  discription: {
+  description: {
     type: String
   },
   ingredients: {
     type: String
+  },
+  directions: {
+    type: String
+  },
+  user: {
+    type: Schema.Types.ObjectId, 
+    ref: 'User'
   }
 }, {
   timestamps: true

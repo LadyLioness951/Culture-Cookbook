@@ -1,11 +1,21 @@
 <%- include('../partials/header') %>
 
+<nav>
+  <a href="/recipes/new">Add Recipe</a>
+</nav>
 <section id="show-page">
     <div>Culture: </div>
     <div><%= culture.name %></div>
-    <br>
-    <div>Image: </div>
-    <div><%= culture.image %></div>
 </section>
+   <div>
+    <% culture.recipes.forEach(function(r) { %>
+        <a href="/recipes/<%= r._id %>">
+          <div>
+            <%= r.name %>
+            <img src="<%= r.image %>">
+          </div>
+        </a>
+      <% }); %>
+   </div>
 
-<%- include('../partials/footer') %>
+<%- include('../partials/footer') %> 

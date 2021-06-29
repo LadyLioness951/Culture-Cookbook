@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<section class="show-recipes">
+    <div>Recipes: </div>
+    <div><%= recipe.name %></div>
+    <div>Image: </div>
+    <div><%= recipe.image %></div>
+    <div>Description: </div>
+    <div><%= recipe.description %></div>
+    <div>Ingredients: </div>
+    <div><%= recipe.ingredients %></div>
+    <div>Directions: </div>
+    <div><%= recipe.directions %></div>
+</section>
+<form action="/cultures/<%= culture._id %>/recipes/new" method="GET">
+    <button type="submit">Add Recipe</button>
+</form>
+
+<%- include('../partials/footer') %>
