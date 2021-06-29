@@ -3,6 +3,18 @@ const Schema = mongoose.Schema;
 
 
 
+const commentSchema = new Schema({
+  content: {
+    type: String,
+    required: true
+  },
+  user: {
+    type: Schema.Types.ObjectId, ref: 'User'
+  },
+}, {
+  timestamps: true
+});
+
 const recipeSchema = new Schema({
   name: {
     type: String
@@ -19,6 +31,7 @@ const recipeSchema = new Schema({
   directions: {
     type: String
   },
+  comments: [commentSchema],
   user: {
     type: Schema.Types.ObjectId, 
     ref: 'User'
@@ -36,7 +49,7 @@ const cultureSchema = new Schema({
     type: String,
     required: true
   },
-  recipes: [recipeSchema]
+  recipes: [recipeSchema],
 }, {
   timestamps: true
 });

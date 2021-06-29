@@ -3,7 +3,7 @@ const Culture = require('../models/culture');
 module.exports = {
     new: newRecipe,
     create,
-    show
+    show,
 };
 
 function newRecipe(req, res) {
