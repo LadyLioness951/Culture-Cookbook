@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Enter a New Recipe</h2>
-<form class="new-recipe" action="recipes/new" method="POST">
+<form class="new-recipe" action="/cultures/<%= cultureId %>/recipes" method="POST">
     <label>Name:</label>
     <input type="text" name="name">
     <br>

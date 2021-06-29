@@ -3,12 +3,13 @@ const Culture = require('../models/culture');
 module.exports = {
     new: newRecipe,
     create,
+    show
 };
 
 function newRecipe(req, res) {
       res.render('recipes/new', {
         name: 'Add Recipe',
-        // recipes
+        cultureId: req.params.id
       });
   };
 
@@ -18,6 +19,16 @@ function create(req, res) {
         culture.recipes.push(req.body);
         culture.save(function(err) {
             res.redirect(`/cultures/${culture._id}`);
+        });
+    });
+}
+
+function show(req, res) {
+    Culture.findOne({'recipes._id': req.params.id}, function(err, culture) {
+        let recipe = culture.recipes.id(req.params.id);
+        res.render('recipes/show', {
+            name: 'Show Recipe',
+            recipe
         });
     });
 }

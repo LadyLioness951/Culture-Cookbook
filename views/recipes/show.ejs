@@ -4,16 +4,14 @@
     <div>Recipes: </div>
     <div><%= recipe.name %></div>
     <div>Image: </div>
-    <div><%= recipe.image %></div>
+    <img src="<%= recipe.image %>">
     <div>Description: </div>
     <div><%= recipe.description %></div>
     <div>Ingredients: </div>
-    <div><%= recipe.ingredients %></div>
+    <div><% recipe.ingredients %></div>
     <div>Directions: </div>
     <div><%= recipe.directions %></div>
 </section>
-<form action="/cultures/<%= culture._id %>/recipes" method="POST">
-    <button type="submit">Add Recipe</button>
-</form>
+  
 
 <%- include('../partials/footer') %>
