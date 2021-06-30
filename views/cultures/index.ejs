@@ -5,9 +5,9 @@
 </nav>
 <% cultures.forEach(function(c) { %>
   <a href="/cultures/<%= c._id %>">
-    <div>
-      <%= c.name %>
-      <img src="<%= c.image %>">
+    <div id="c-img">
+      <img id="image" src="<%= c.image %>">
+      <p id="text"><%= c.name %></p>
     </div>
   </a>
 <% }); %>

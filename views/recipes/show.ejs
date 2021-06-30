@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
 <section class="show-recipes">
-    <div>Recipes: </div>
-    <div><%= recipe.name %></div>
-    <div>Image: </div>
-    <img src="<%= recipe.image %>">
-    <div>Description: </div>
-    <div><%= recipe.description %></div>
-    <div>Ingredients: </div>
-    <div><%= recipe.ingredients %></div>
-    <div>Directions: </div>
-    <div><%= recipe.directions %></div>
+    <div></div>
+    <div id="r-title"><%= recipe.name %></div>
+    <div></div>
+    <img id="rec-img" src="<%= recipe.image %>">
+    <div class="left">Description: </div>
+    <div class="left"><%= recipe.description %></div>
+    <div class="right">Ingredients: </div>
+    <div class="right"><%= recipe.ingredients %></div>
+    <div class="bottom">Directions: </div>
+    <div class="bottom"><%= recipe.directions %></div>
 </section>
   
 <form action="/recipes/<%= recipe._id %>/comments" method="POST">
@@ -23,7 +23,7 @@
       <%= comment.content %><br>
       <% if (comment.user.equals(user._id)) { %>
         <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button>
+          <button type="submit">Delete</button>
         </form>
         <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
           <input name="content" value="<%= comment.content %>">

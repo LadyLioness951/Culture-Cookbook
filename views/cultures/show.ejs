@@ -10,9 +10,9 @@
    <div>
     <% culture.recipes.forEach(function(r) { %>
         <a href="/recipes/<%= r._id %>">
-          <div>
-            <%= r.name %>
-            <img src="<%= r.image %>">
+          <div id="r-img">
+            <img id="r-image" src="<%= r.image %>">
+            <p id="r-text"><%= r.name %></p>
           </div>
         </a>
       <% }); %>

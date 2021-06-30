@@ -4,7 +4,6 @@
 
 body {
   padding: 50px;
-  font: 14px;
 }
 
 a {
@@ -25,14 +24,22 @@ h3 {
 
 .home-page {
   height: 85vh;
-  background-image: url('https://i.imgur.com/MpzzOhTm.jpg');
+  background-image: url('https://i.imgur.com/ABrxC3Yl.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .home {
+  margin-top: 20vmin;
   text-align: center;
-  color: red;
+}
+
+h1 {
+  color: rgb(15, 240, 22);
+}
+
+p {
+  color: rgb(14, 242, 22);
 }
 
 .tour-culture {
@@ -52,10 +59,48 @@ h3 {
   border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
 }
 
-#add-culture-form {
-  background-color: chocolate;
+body {
+  background-color: beige;
+}
+
+#c-img, #r-img {
+  height:400px;
+  width:400px;
+  position:relative;grid-template-columns: 2;
+}
+
+#image, #r-image {    
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+#text, #r-text {
+  z-index:100;
+  position:absolute;    
+  color:blue;
+  font-size:24px;
+  font-weight:bold;
+  top: 40%;
+}
+
+.new-recipe {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: center;
+}
+
+#r-title, #rec-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
   align-content: flex-start;
 }

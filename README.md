@@ -4,6 +4,8 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 
 ## Screenshot(s)
 
+![Home Page]()
+
 ## Technology Used
 
 * HTML
@@ -14,7 +16,10 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 
 ## Getting Started
 
+[To Experience Culture Through Cooking Click Here](https://culture-cookbook.herokuapp.com/)
+
 Enjoy touring the world by cuisines.
 
 ## Next Steps
 
+Make app mobile friendly
