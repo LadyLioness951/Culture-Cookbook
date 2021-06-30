@@ -5,7 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <nav>
       <h3>Experience the World Through Cuisine</h3>
-      <a class="login" href="auth/google">Login</a>
+      <% if (user) { %>
+        <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a class="login" href="auth/google">Login</a>
+      <% } %>
     </nav>
   </head>
   <body class="home-page">

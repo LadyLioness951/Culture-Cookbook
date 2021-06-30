@@ -7,5 +7,12 @@
   <body>
     <nav>
       <h3>Experience the World Through Cuisine</h3>
-      <a class="home" href="/">home</a>
-      <a class="login" href="auth/google">Login</a>
+      <a class="home" href="/">home</a> 
+      |
+      <a class="all-cultures-home" href="/cultures">All Cultures</a>
+      <% if (user) { %>
+        <a class="logout" href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a class="login" href="auth/google">Login</a>
+      <% } %>
+    </nav>
