@@ -7,12 +7,12 @@
     <div>Culture: </div>
     <div><%= culture.name %></div>
 </section>
-   <div>
+   <div class="wrapper-grid">
     <% culture.recipes.forEach(function(r) { %>
         <a href="/recipes/<%= r._id %>">
-          <div id="r-img">
-            <img id="r-image" src="<%= r.image %>">
-            <p id="r-text"><%= r.name %></p>
+          <div class="container">
+            <h1><%= r.name %></h1>
+            <img class="image" src="<%= r.image %>">
           </div>
         </a>
       <% }); %>

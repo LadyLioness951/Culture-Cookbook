@@ -35,11 +35,12 @@ h3 {
 }
 
 h1 {
-  color: white;
+  color: blue;
 }
 
-p {
+p, #p {
   color: white;
+  text-shadow: 1px 1px black;
 }
 
 .tour-culture {
@@ -63,32 +64,12 @@ body {
   background-color: beige;
 }
 
-#c-img, #r-img {
-  height:400px;
-  width:400px;
-  position:relative;grid-template-columns: 2;
-}
-
-#image, #r-image {    
-  position:absolute;
-  left:0;
-  top:0;
-}
-
-#text, #r-text {
-  z-index:100;
-  position:absolute;    
-  color:blue;
-  font-size:24px;
-  font-weight:bold;
-  top: 40%;
-}
-
 .new-recipe {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  /* width: 80vw; */
 }
 
 #recipe-show {
@@ -116,10 +97,39 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-content: center;
+  align-content: flex-start;
 }
 
 #mid-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  width: 75vw;
+}
+
+#add {
+  width: 25vw;
+  margin-left: 50vmin;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  justify-content: center;
+}
+
+.container {
+  box-shadow: 0px 2px 8px 0px lightgray;
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 3rem 1rem;
+  height: 42vmin;
+  width: 40vmin;
+}
+
+.image {
+  height: 40vmin;
+  width: 40vmin;
 }

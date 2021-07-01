@@ -1,15 +1,19 @@
 <%- include('../partials/header') %>
 
 <nav>
+  <% if (user) { %>
   <a href="/cultures/new">Add Culture</a>
+  <% } %>
 </nav>
-<% cultures.forEach(function(c) { %>
-  <a href="/cultures/<%= c._id %>">
-    <div id="c-img">
-      <img id="image" src="<%= c.image %>">
-      <p id="text"><%= c.name %></p>
-    </div>
-  </a>
-<% }); %>
+<div class="wrapper-grid">
+  <% cultures.forEach(function(c) { %>
+    <a href="/cultures/<%= c._id %>">
+      <div class="container">
+        <h1><%= c.name %></h1>
+        <img class="image" src="<%= c.image %>">
+      </div>
+    </a>
+  <% }); %>
+</div>
 
 <%- include('../partials/footer') %>
