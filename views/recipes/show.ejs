@@ -1,30 +1,37 @@
 <%- include('../partials/header') %>
 
-<section class="show-recipes">
-    <div></div>
-    <div id="r-title"><%= recipe.name %></div>
-    <div></div>
-    <img id="rec-img" src="<%= recipe.image %>">
-    <div class="left">Description: </div>
-    <div class="left"><%= recipe.description %></div>
-    <div class="right">Ingredients: </div>
-    <div class="right"><%= recipe.ingredients %></div>
-    <div class="bottom">Directions: </div>
-    <div class="bottom"><%= recipe.directions %></div>
+<main id="recipe-show">
+<section id="row-1">
+  <div id="description">
+    <div>Description:</div>
+    <div><%= recipe.description %></div>
+  </div>
+  <div id="recipe-image">
+    <div><%= recipe.name %></div>
+    <img src="<%= recipe.image %>">
+  </div>
+  <div id="ingredients">
+    <div>Ingredients: </div>
+    <div><%= recipe.ingredients %></div>
+  </div>
+</section><br>
+<section class="row-2">
+    <div>Directions: </div>
+    <div><%= recipe.directions %></div>
 </section>
-  
+<br>
 <form action="/recipes/<%= recipe._id %>/comments" method="POST">
     <input type="text" name="content">
     <button type="submit">Add Comment</button>
 </form>
-
+<br>
 <% recipe.comments.forEach(function(comment) { %>
     <div class="comment">
       <%= comment.content %><br>
       <% if (comment.user.equals(user._id)) { %>
         <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
           <button type="submit">Delete</button>
-        </form>
+        </form><br>
         <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
           <input name="content" value="<%= comment.content %>">
           <button type="submit">Update Comment</button>
@@ -32,5 +39,6 @@
       <% } %>
     </div>
   <% }) %>
+</main>
 
 <%- include('../partials/footer') %>

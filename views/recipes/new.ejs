@@ -2,22 +2,23 @@
 
 <h2>Enter a New Recipe</h2>
 <form class="new-recipe" action="/cultures/<%= cultureId %>/recipes" method="POST">
-    <label>Name:</label>
-    <input type="text" name="name">
-    <br>
-    <label>Image URL:</label>
-    <input type="text" name="image">
-    <br>
-    <label>Description:</label>
-    <textarea name="description" id="details" cols="30" rows="10"></textarea>
-    <br>
-    <label>Ingredients:</label>
-    <textarea name="ingredients" id="details" cols="30" rows="10"></textarea>
-    <br>
-    <label>Directions:</label>
-    <textarea name="directions" id="details" cols="30" rows="10"></textarea>
+    <section id="top-row">
+    <div id="name"><label>Name:</label></div>
+    <div><input type="text" name="name"></div>
+    <div id="img-url"><label>Image URL:</label></div>
+    <div><input type="text" name="image"></div>
+    </section>
     <br><br>
-    <button type="submit">Add Recipes</button>
+    <section id="mid-row">
+    <div id="descrip"><label>Description:</label></div>
+    <div><textarea name="description" id="details" cols="30" rows="10"></textarea></div>
+    <div id="ing"><label>Ingredients:</label></div>
+    <div><textarea name="ingredients" id="details" cols="30" rows="10"></textarea></div>
+    <div id="direct"><label>Directions:</label></div>
+    <div><textarea name="directions" id="details" cols="30" rows="10"></textarea></div>
+    </section>
+    <br><br>
+    <button id="add" type="submit">Add Recipes</button>
 </form>
 
 

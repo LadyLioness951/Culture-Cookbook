@@ -4,7 +4,8 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 
 ## Screenshot(s)
 
-![Home Page]()
+![Home](https://i.imgur.com/7bPvqQdt.png)
+![Recipe](https://i.imgur.com/hzdzgUet.png)
 
 ## Technology Used
 
@@ -12,7 +13,9 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 * CSS
 * Express
 * Mongoose
+* node.js
 * Oauth
+* heroku
 
 ## Getting Started
 
