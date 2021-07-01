@@ -15,6 +15,21 @@
     <div><%= recipe.ingredients %></div>
   </div>
 </section><br>
+<section class="lld">
+  <a href="/recipes/<%= recipe._id %>/like">
+    <button>👍</button>
+  </a>
+  <h4><%= likes.length %> Like</h4>
+
+  <a href="/recipes/<%= recipe._id %>/love">
+    <button>♥️</button>
+  </a>
+  <h4><%= loves.length %> Love</h4>
+  <a href="/recipes/<%= recipe._id %>/dislike">
+    <button>👎</button>
+  </a>
+  <h4><%= dislikes.length %> Dislike</h4>
+</section>
 <section class="row-2">
     <div>Directions: </div>
     <div><%= recipe.directions %></div>

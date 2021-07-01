@@ -40,7 +40,7 @@ h1 {
 
 p, #p {
   color: white;
-  text-shadow: 1px 1px black;
+text-shadow: 1px 1px black;
 }
 
 .tour-culture {
@@ -79,7 +79,7 @@ body {
   align-content: center;
 }
 
-#row-1 {
+#row-1, .lld {
   display: flex;
   justify-content: space-evenly;
 }

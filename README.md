@@ -4,10 +4,10 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 
 ## Screenshot(s)
 
-![Home](https://i.imgur.com/7bPvqQdt.png)
-![Cultures](https://i.imgur.com/j7ruaS3t.png)
-![Dishes in a Culture](https://i.imgur.com/3XzSzaLt.png)
-![Recipe](https://i.imgur.com/hzdzgUet.png)
+![Home](https://i.imgur.com/7bPvqQdm.png)
+![Cultures](https://i.imgur.com/j7ruaS3m.png)
+![Dishes in a Culture](https://i.imgur.com/3XzSzaLm.png)
+![Recipe](https://i.imgur.com/MTFnrq8m.png)
 
 ## Technology Used
 
@@ -31,4 +31,3 @@ Enjoy touring the world by cuisines.
 * Turn Ingredients into listed items
 * Turn directions into a listed item
 * Make an admin so I can aprove the pictures that are being uploaded
-* Add love, like and dislike functionality to my recipes

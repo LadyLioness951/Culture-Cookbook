@@ -15,6 +15,10 @@ var indexRouter = require('./routes/index');
 var culturesRouter = require('./routes/cultures');
 var recipesRouter = require('./routes/recipes');
 var commentsRouter = require('./routes/comments');
+var lovesRouter = require('./routes/loves');
+var likesRouter = require('./routes/likes');
+var dislikesRouter = require('./routes/dislikes');
+
 
 var app = express();
 
@@ -50,6 +54,9 @@ app.use('/', indexRouter);
 app.use('/cultures', culturesRouter);
 app.use('/', recipesRouter);
 app.use('/', commentsRouter);
+app.use('/', lovesRouter);
+app.use('/', likesRouter);
+app.use('/', dislikesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,4 +1,7 @@
 const Culture = require('../models/culture');
+const Like = require('../models/like');
+const Dislike = require('../models/dislike');
+const Love = require('../models/love');
 
 module.exports = {
     new: newRecipe,
@@ -25,10 +28,19 @@ function create(req, res) {
 
 function show(req, res) {
     Culture.findOne({'recipes._id': req.params.id}, function(err, culture) {
-        let recipe = culture.recipes.id(req.params.id);
-        res.render('recipes/show', {
-            name: 'Show Recipe',
-            recipe
-        });
+        Like.find({'recipe': req.params.id}, function(err, likes) {
+            Love.find({'recipe': req.params.id}, function(err, loves) {
+                Dislike.find({'recipe': req.params.id}, function(err, dislikes) {
+                    let recipe = culture.recipes.id(req.params.id);
+                    res.render('recipes/show', {
+                        name: 'Show Recipe',
+                        recipe,
+                        likes, 
+                        loves,
+                        dislikes
+                    });
+                })
+            });
+        })
     });
 }
