@@ -8,7 +8,9 @@ module.exports = {
 }
 
 function index(req, res) {
-    Culture.find({}, function(err, cultures) {
+    Culture.find({})
+        .sort('name')
+        .exec(function(err, cultures) {
         console.log(cultures);
         res.render('cultures/index', {name: 'All cultures', cultures});
     });
