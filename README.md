@@ -21,6 +21,7 @@ The culture cookbook is a place to go to explore the world through recipes. You 
 
 ## Getting Started
 
+[Trello Board Link](https://trello.com/b/Z5AyYUXM/heritage-cookbook-planning)
 [To Experience Culture Through Cooking Click Here](https://culture-cookbook.herokuapp.com/)
 
 Enjoy touring the world by cuisines.
