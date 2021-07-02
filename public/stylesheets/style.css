@@ -24,9 +24,10 @@ h3 {
 
 .home-page {
   height: 85vh;
-  background-image: url('https://i.imgur.com/7bPvqQd.png');
+  background-image: url('https://i.imgur.com/MpzzOhT.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .home {
@@ -40,7 +41,7 @@ h1 {
 
 p, #p {
   color: white;
-text-shadow: 1px 1px black;
+  text-shadow: 1px 1px black;
 }
 
 .tour-culture {
